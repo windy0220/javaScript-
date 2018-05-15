@@ -13,3 +13,5 @@ var sum2 = values.reduceRight(function(prev, cur, index, array){
   return prev - cur;
 })
 console.log(sum2)
+
+//http://jsbin.com/tusadag/1/edit?html,js,output

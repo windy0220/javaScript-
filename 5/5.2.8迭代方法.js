@@ -39,3 +39,5 @@ numbers.forEach(function(item, index, array){
   forEachNumbers.push(item);
 })
 console.log(forEachNumbers)
+
+//http://jsbin.com/tusadag/1/edit?html,js,output
