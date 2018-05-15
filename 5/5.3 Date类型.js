@@ -24,3 +24,5 @@ console.log(start);
 //使用 +new Date() 能达到 Date.now() 的效果。低版本浏览器支持
 var end = +new Date();
 console.log(end);
+
+//http://jsbin.com/qutisof/edit?js,console
