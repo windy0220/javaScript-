@@ -107,3 +107,5 @@ function inner(){
 
 outer();
 
+
+//http://jsbin.com/hujumoy/edit?js,console
