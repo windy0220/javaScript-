@@ -89,4 +89,3 @@ BOM
     - NaN == Nan 为 false ; 与NaN计算都为 NaN 如 NaN/10 为 NaN
     - isNaN() 尝试将参数转会数值再判断 “10” 可转换为 10； “blue” 不能转换为数值 ； true 可转换为 1；false 转换为 0
     - 数值转换 
-    123
