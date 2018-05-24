@@ -48,7 +48,7 @@ console.log(sayColor());
 console.log(sayColor.call(window));
 console.log(sayColor.call(o)); //将作用于转为 o
 
-//bind 方法 可以绑定作用域并创建一个新的函数
+//bind 方法 可以绑定作用域并创建一个新的函数 【ES5】
 var newSayColor = sayColor.bind(o);
 console.log(newSayColor()); //在哪里调用作用域都为o
 
