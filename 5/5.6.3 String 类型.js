@@ -47,4 +47,83 @@ while(pos > -1){
 }
 console.log(strArr);
 
-//trim()方法
+//trim()方法 ES5
+
+var str = '   Hello    ';
+console.log(str.trim()); //删除前后空格
+
+//字符串大小转换
+var str = 'hello world!';
+console.log(str.toLocaleUpperCase()); //转为大写，地区适用，如果不知道所处的语言环境，建议使用此方法
+console.log(str.toUpperCase());
+console.log(str.toLocaleLowerCase()); //转为小写
+console.log(str.toLowerCase());
+
+//字符串模式匹配
+var text = 'Cat, bat, sat, fat';
+var pattern = /.at/;
+
+var matches = text.match(pattern); //相当于调用了 RegExp 的 exec() 方法。 match() 只接受一个参数 正则表达式，或 RegExp 对象
+console.log(matches);
+console.log(matches.index);
+console.log(matches[0]);
+console.log(pattern.lastIndex);
+
+console.log(text.search(/at/)); //search 与 match 接受的参数相同，返回匹配的索引，若没有找到返回-1 只从左至右找
+
+console.log(text.replace('at', 'ond')); //字符串替换
+console.log(text.replace(/at/g, 'ond')); //使用正则替换所有匹配项
+
+console.log(text.replace(/(.at)/g, 'word ($1)'));
+
+function htmlEscape(text){
+    return text.replace(/[<>"&]/g, function(match, pos, originalText){
+        switch(match){
+            case "<":
+                return "&lt;";
+            case ">":
+                return "&gt;";
+            case "&":
+                return "&amp;";
+            case "\"":
+                return "&quot;";
+        }
+    });
+}
+
+console.log(htmlEscape("<p class=\"greeting\">Hello world!</p>"));
+
+
+//split() 分割成数组
+var colorText = "red,blue,green,yellow";
+console.log(colorText.split(','));
+console.log(colorText.split(',', 2)); //只生成两个
+console.log(colorText.split(/[^\,]+/));
+
+//localeCompare() 方法
+var stringValue = 'yellow';
+console.log(stringValue.localeCompare('brick')); //brick 在字母表中 排在 yellow 前面 返回 1
+console.log(stringValue.localeCompare('yellow')); //相等 返回0
+console.log(stringValue.localeCompare('zoo')); //排在后面返回 -1
+
+function determineOrder(value){
+    var result = stringValue.localeCompare(value);
+    if(result < 0){
+        console.log("The string 'yellow' comes before the string '" + value + "'.");
+    } else if(result > 0){
+        console.log("The string 'yellow' comes after the string '" + value + "'.");
+    } else {
+        console.log("The string 'yellow' comes eaual the string '" + value + "'.");
+    }
+}
+
+determineOrder("brick");
+determineOrder("yellow");
+determineOrder("zoo");
+
+//fromCharCode 接受一个或多个字符编码转换成字符串 与 charCodeAt() 执行相反的操作
+console.log(String.fromCharCode(104,101,108,108,111));
+
+//Html 方法 略不建议用
+
+
