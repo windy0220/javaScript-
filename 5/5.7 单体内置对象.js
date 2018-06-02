@@ -60,3 +60,5 @@ function getRandomNum(minNum, maxNum){
 }
 
 console.log(getRandomNum(1,10)); //取1到10的随机数
+
+//http://jsbin.com/buhavig/3/edit?js,conso
